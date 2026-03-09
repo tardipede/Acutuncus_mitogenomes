@@ -1,0 +1,23 @@
+name: acutuncus_mitogenomes
+channels:
+  - conda
+  - conda-forge
+  - base
+  - bioconda
+dependencies:
+ - diamond
+ - seqkit
+ - seqtk
+ - novoplasty
+ - flye
+ - minimap2
+ - porechop_abi
+ - blast
+ - mitos>=2
+ - r-base
+ - r-tidyverse
+ - r-purrr
+ - r-ggplot2
+ - r-ggridges
+ - r-gggenes
+ - r-writexl
