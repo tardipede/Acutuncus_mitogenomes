@@ -1,0 +1,38 @@
+Project:
+-----------------------
+Project name          = Acu
+Type                  = mito
+Genome Range          = 14000-15000
+K-mer                 = 33
+Max memory            =
+Extended log          = 0
+Save assembled reads  = no
+Seed Input            = ./Acu_ref_giovanniniae.fasta
+Extend seed directly  = no
+Reference sequence    =
+Variance detection    = 
+Chloroplast sequence  = 
+
+Dataset 1:
+-----------------------
+Read Length           = 150
+Insert size           =
+Platform              = illumina
+Single/Paired         = SE
+Combined reads        = ./illuminalike.fastq
+Forward reads         =
+Reverse reads         = 
+Store Hash            =
+
+Heteroplasmy:
+-----------------------
+MAF                   = 
+HP exclude list       = 
+PCR-free              = 
+
+Optional:
+-----------------------
+Insert size auto      =
+Use Quality Scores    = yes
+Reduce ambigious N's  = yes
+Output path           = ./output_mito/
