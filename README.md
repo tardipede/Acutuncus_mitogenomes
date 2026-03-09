@@ -17,5 +17,8 @@ conda env create -f ./acutuncus_mitogenomes.yml
     * scripts/003_mitos.bash (Run in bash - before running it check how to prepare the data as written inside the script file)
     * scripts/004_blast_results_analysis.r (Run in R - before running it check how to prepare the data as written inside the script file)
 
-## 4) Reads primers and adapters chopping
+## 4) Notes on script 001_assembly
+The config and COI reference files needed to run NOVOplasty are provided in the folder *NOVOplasty_config_material*, before running the script 001 place in the working directory the appropriate reference sequence in fasta format and the config file. Inside the config file change the *Seed Input* field to match the name of the reference fasta file used
+
+## 5) Reads primers and adapters chopping
 The reads present in NCBI have been already cleaned from adapters and barcodes, however the code used is available to check at *scripts/999_chopper.bash*
