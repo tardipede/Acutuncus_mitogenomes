@@ -3,8 +3,12 @@ Assembly of Acutuncus mitogenomes with a quick solution to deal with MDA generat
 
 ## 1) Create a folder name data and place there the raw reads files
 Download the raw reads file from the NCBI project PRJNA1287536.
-The runs names should be downloaded with their original names, otherwise rename them as in the example below:  
-    * Acu_gio_RIT094.fastq
+The runs names should be downloaded with their original names, otherwise rename them as below:  
+    Acu_gio_RIT094.fastq
+    Acu_gio_RPL027.fastq
+    Acu_gio_RSE010.fastq
+    Acu_mec_RSE086.fastq
+    Acu_mec_RSE087.fastq
 
 ## 2) Create conda env
 ```
