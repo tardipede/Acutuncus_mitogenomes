@@ -102,6 +102,7 @@ order_matches_table = function(x, query_id){
   return(x)
 }
 
+
 # Format data
 table_allmatches_red = subset(table_allmatches, n_matches >= 1)
 set.seed = 1479034 # This is needed to be sure that every run will give the same exact figure
@@ -115,7 +116,8 @@ data_plot_genes = table_allmatches_red %>%
                          .y = qseqid, 
                          ~order_matches_table(.x, .y))) %>%
   select(c("individual","plotdata")) %>%
-  unnest(cols = "plotdata")
+  unnest(cols = "plotdata") %>%
+  mutate(direction = ifelse(start2 > end2, "Rev", "For"))
 
 # Make the plot and save it as pdf
 ggplot(data_plot_genes) +
@@ -139,12 +141,14 @@ ggplot(data_plot_genes) +
   geom_gene_arrow(aes(y = queryID,
                       xmin = start2,
                       xmax = end2,
-                      fill = pident))+
+                      fill = direction),
+                  show.legend = FALSE)+
+  scale_fill_manual(values = c("Rev" = "#e9a3c9", 
+                               "For" = "#a1d76a")) +
   facet_wrap(~ queryID, scales = "free_y", ncol = 1) +
-  scale_fill_gradient2(low = "#edf8b1", mid = "#7fcdbb",high = "#2c7fb8",
-                       midpoint = 98.5) +
   labs(x = "", y = "",
        title = "mitogenome matches on some random reads")
+                                           
 ggsave("reads_allmito.pdf",
        height = 6*1.2,
        width = 12*1.2)
