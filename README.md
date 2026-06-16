@@ -1,5 +1,7 @@
 # Acutuncus_mitogenomes
-Assembly of Acutuncus mitogenomes with a quick solution to deal with MDA generated palindromes
+Assembly of Acutuncus mitogenomes with a quick solution to deal with MDA generated palindromes  
+Associated with the article:  
+Vecchi, Surmacz, Jonsson & Stec (2026) **Fragmentation of Long Reads Enables Reliable Mitogenome Assembly From Whole-Genome Amplification Data With Pervasive Palindromic Reads.** *Molecular Ecology Resources*, 26:e70165. https://doi.org/10.1111/1755-0998.70165
 
 ## 1) Create a folder name data and place there the raw reads files
 Download the raw reads file from the NCBI project PRJNA1287536.
